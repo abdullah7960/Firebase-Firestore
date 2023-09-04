@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_firestore/view/screen/product_item.dart';
+import 'package:firebase_firestore/view/screen/products_screens/products.dart';
 import 'package:flutter/material.dart';
 
 import 'adduser_screen.dart';
@@ -76,6 +77,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => AddUser(),
+                  ),
+                );
+              },
+            ),
+            const Divider(
+              height: 10,
+              indent: 65,
+              color: Colors.black,
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.add_box,
+                color: Colors.orangeAccent,
+              ),
+              title: const Text(
+                "Products Screen ",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const ProductScreen(),
                   ),
                 );
               },
